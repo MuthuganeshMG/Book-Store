@@ -10,21 +10,21 @@ const ServicesData = [
     img: Img1,
     title: "His Life",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A compelling story of transformation and personal growth that inspires readers to embrace change and overcome challenges.",
   },
   {
     id: 2,
     img: Img2,
-    title: "Who's there",
+    title: "Who's There",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A gripping thriller filled with suspense and unexpected twists, keeping readers on the edge of their seats.",
   },
   {
     id: 3,
     img: Img3,
     title: "Lost Boy",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A heartfelt narrative about finding one’s place in the world, exploring family, identity, and belonging.",
   },
 ];
 
@@ -35,27 +35,26 @@ const Services = ({ handleOrderPopup }) => {
       <div className="py-10">
         <div className="container">
           <div className="text-center mb-20 max-w-[400px] mx-auto">
-            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary ">
+            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Trending Books
             </p>
             <h1 className="text-3xl font-bold">Best Books</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+              Explore our curated selection of books that inspire, entertain, and captivate readers of all ages.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
             {ServicesData.map((service) => (
               <div
+                key={service.id}
                 data-aos="zoom-in"
                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
               >
                 <div className="h-[100px]">
                   <img
                     src={service.img}
-                    alt=""
-                    className="max-w-[100px] block mx-auto transform -translate-y-14
-                  group-hover:scale-105  duration-300 shadow-md"
+                    alt={service.title}
+                    className="max-w-[100px] block mx-auto transform -translate-y-14 group-hover:scale-105 duration-300 shadow-md"
                   />
                 </div>
                 <div className="p-4 text-center">

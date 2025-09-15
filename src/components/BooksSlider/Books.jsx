@@ -8,37 +8,37 @@ const booksDatas = [
   {
     id: 1,
     img: Book1,
-    title: "Who's there",
+    title: "Who's There",
     rating: 5.0,
-    author: "Someone",
+    author: "Alex Johnson",
   },
   {
     id: 2,
     img: Book2,
     title: "His Life",
     rating: 4.5,
-    author: "John",
+    author: "John Smith",
   },
   {
     id: 3,
     img: Book3,
-    title: "Lost boys",
+    title: "Lost Boys",
     rating: 4.7,
-    author: "Lost Girl",
+    author: "Emily Clark",
   },
   {
     id: 4,
     img: Book2,
-    title: "His Life",
+    title: "The Journey",
     rating: 4.4,
-    author: "Someone",
+    author: "Michael Lee",
   },
   {
     id: 5,
     img: Book1,
-    title: "Who's There",
+    title: "Hidden Secrets",
     rating: 4.5,
-    author: "Someone",
+    author: "Sophia Davis",
   },
 ];
 
@@ -50,12 +50,11 @@ const Books = () => {
           {/* header */}
           <div className="text-center mb-10 max-w-[600px] mx-auto">
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-              Top Books for you
+              Curated Book Collection
             </p>
             <h1 className="text-3xl font-bold">Top Books</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+              Explore our top picks from a variety of genres. Discover books that inspire, educate, and entertain.
             </p>
           </div>
 
@@ -64,11 +63,11 @@ const Books = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
               {/* Card */}
               {booksDatas.map((booksData) => (
-                <div key={booksData._id} className="div space-y-3">
+                <div key={booksData.id} className="space-y-3">
                   <img
                     src={booksData.img}
-                    alt=""
-                    className="h-[220px] w-[150px] object-cover rounded-md "
+                    alt={booksData.title}
+                    className="h-[220px] w-[150px] object-cover rounded-md"
                   />
                   <div>
                     <h3 className="font-semibold">{booksData.title}</h3>
@@ -82,7 +81,7 @@ const Books = () => {
               ))}
             </div>
             <div className="flex justify-center">
-              <button className="text-center mt-10 cursor-pointer  bg-primary text-white py-1 px-5 rounded-md">
+              <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-6 rounded-md hover:bg-primary/80 duration-200">
                 View All Books
               </button>
             </div>
